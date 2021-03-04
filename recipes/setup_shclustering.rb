@@ -111,7 +111,9 @@ end
 
 ruby_block 'captain elected' do
   block do
-    node.default['splunk']['shclustering']['captain_elected'] = true
+    # rubocop:disable  Chef/Correctness/NodeNormal
+    node.nomal['splunk']['shclustering']['captain_elected'] = true
+    # rubocop:enable  Chef/Correctness/NodeNormal
   end
   action :nothing
   subscribes :run, 'execute[bootstrap-shcluster-captain]'
