@@ -1,0 +1,5 @@
+{
+  "id" : "splunk_local",
+  "auth" : "admin:notarealpassword",
+  "secret" : "notarealsecret"
+}

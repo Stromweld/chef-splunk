@@ -9,6 +9,7 @@ transport:
 
 provisioner:
   name: dokken
+  clean_dokken_sandbox: false
 
 platforms:
   - name: amazonlinux-2
