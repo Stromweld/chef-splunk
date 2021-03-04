@@ -1,5 +1,6 @@
 # To learn more about Custom Resources, see https://docs.chef.io/custom_resources.html
 #
+# Author:: Dang H. Nguyen <dang.nguyen@disney.com>
 # Author:: Corey Hemminger
 # Cookbook:: chef-splunk
 # Resource:: server_install
