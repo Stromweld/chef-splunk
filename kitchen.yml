@@ -2,7 +2,7 @@
 driver:
   name: vagrant
   chef_version: <%= ENV['CHEF_VERSION'] || 'current' %>
-  env: [ CHEF_LICENSE=accept ]
+  env: [CHEF_LICENSE=accept]
 
 provisioner:
   name: chef_zero
