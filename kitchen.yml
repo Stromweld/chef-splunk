@@ -88,7 +88,7 @@ suites:
       named_run_list: server_runas_root
     lifecycle:
       post_converge:
-        - local: sleep 10
+        - local: sleep 120
     verifier:
       inspec_tests:
         - test/integration/server_runas_root
@@ -99,7 +99,7 @@ suites:
       named_run_list: server_runas_splunk
     lifecycle:
       post_converge:
-        - local: sleep 10
+        - local: sleep 120
     verifier:
       inspec_tests:
         - test/integration/server_runas_splunk
