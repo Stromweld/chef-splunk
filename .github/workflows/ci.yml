@@ -48,20 +48,20 @@ jobs:
           - ubuntu-1804
           - ubuntu-2004
         suite:
-#          - 'client-inputs-outputs'
-#          - 'client-resources'
-#          - 'client-runas-splunk'
-#          - 'client'
-#          - 'disabled'
-#          - 'server-cluster-master'
-#          - 'server-resources'
+          # - 'client-inputs-outputs'
+          # - 'client-resources'
+          # - 'client-runas-splunk'
+          # - 'client'
+          # - 'disabled'
+          # - 'server-cluster-master'
+          # - 'server-resources'
           - 'server-runas-root'
           - 'server-runas-splunk'
-#          - 'server-shcluster-member'
-#          - 'server-shdeployer'
-#          - 'uninstall-forwarder'
-#          - 'upgrade-client'
-#          - 'upgrade-server'
+          # - 'server-shcluster-member'
+          # - 'server-shdeployer'
+          # - 'uninstall-forwarder'
+          # - 'upgrade-client'
+          # - 'upgrade-server'
       fail-fast: false
 
     steps:
