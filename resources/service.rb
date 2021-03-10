@@ -53,7 +53,8 @@ action :start do
     creates "/etc/systemd/system/#{svc_name}.service"
   end
 
-  service svc_name do
+  service 'splunk' do
+    service_name svc_name
     action [:enable, :start]
   end
 end

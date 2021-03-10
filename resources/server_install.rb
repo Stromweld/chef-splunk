@@ -108,6 +108,6 @@ action :install do
       end
     end
     not_if { shell_out("stat -c '%U' #{install_dir}/var").stdout.eql?(svc_user) }
-    subscribes :run, 'service[Splunkd]', :before
+    subscribes :run, 'service[splunk]', :before
   end
 end
