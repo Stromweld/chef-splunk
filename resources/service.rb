@@ -34,6 +34,10 @@ property :svc_user, %w(splunk root),
          default: 'splunk',
          description: 'Service runas user'
 
+property :systemd, [true, false],
+         default: true,
+         description: ''
+
 action :start do
   description 'Setup Splunk Service'
 
@@ -41,9 +45,10 @@ action :start do
   splunk_bin = new_resource.splunk_bin_path
   svc_name = new_resource.service_name
   svc_user = new_resource.svc_user
+  sysd = new_resource.systemd ? 1 : 0
 
   # Create systemd service and start splunk server
-  execute "#{splunk_bin} enable boot-start -user '#{svc_user}' -systemd-managed 1 --accept-license" do
+  execute "#{splunk_bin} enable boot-start -user '#{svc_user}' -systemd-managed #{sysd} --accept-license" do
     live_stream true
     creates "/etc/systemd/system/#{svc_name}.service"
   end
